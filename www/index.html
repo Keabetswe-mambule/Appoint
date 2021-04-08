@@ -33,6 +33,7 @@
         page="home.html"
       ></ons-splitter-content>
     </ons-splitter>
+    <!-----------------------------Patient------------------------------------>
 
     <template id="home.html">
       <ons-page>
@@ -42,11 +43,85 @@
               <ons-icon icon="md-menu"></ons-icon>
             </ons-toolbar-button>
           </div>
-          <div class="center">Main</div>
+          <div class="center">AppOint</div>
         </ons-toolbar>
         <p style="text-align: center; opacity: 0.6; padding-top: 20px">
           Swipe right to open the menu!
         </p>
+      </ons-page>
+    </template>
+
+    <template id="add_edit.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+              <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">Add Appointment</div>
+        </ons-toolbar>
+        <p style="text-align: center; opacity: 0.6; padding-top: 20px">
+          Swipe right to open the menu!
+        </p>
+      </ons-page>
+    </template>
+    <!-----------------------------Doctor------------------------------------>
+    <template id="home.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+              <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">AppOint</div>
+        </ons-toolbar>
+        <p style="text-align: center; opacity: 0.6; padding-top: 20px">
+          Swipe right to open the menu!
+        </p>
+      </ons-page>
+    </template>
+
+    <template id="client.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+              <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">Patient Info</div>
+        </ons-toolbar>
+        <p style="text-align: center; opacity: 0.6; padding-top: 20px">
+          Swipe right to open the menu!
+        </p>
+      </ons-page>
+    </template>
+    <!-----------------------------Common------------------------------------>
+    <template id="login.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+              <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">Login</div>
+        </ons-toolbar>
+      </ons-page>
+    </template>
+
+    <template id="signup.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+              <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">Sign Up</div>
+        </ons-toolbar>
       </ons-page>
     </template>
 
@@ -75,6 +150,23 @@
         </ons-toolbar>
       </ons-page>
     </template>
+
+    <template id="past.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+              <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">Past Appointments</div>
+        </ons-toolbar>
+        <p style="text-align: center; opacity: 0.6; padding-top: 20px">
+          Swipe right to open the menu!
+        </p>
+      </ons-page>
+    </template>
+
     <script src="../node_modules/onsenui/js/onsenui.min.js"></script>
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
