@@ -1,16 +1,16 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady() {}
+function onDeviceReady() {
+  window.fn = {};
 
-window.fn = {};
+  window.fn.open = function () {
+    var menu = document.getElementById("menu");
+    menu.open();
+  };
 
-window.fn.open = function () {
-  var menu = document.getElementById("menu");
-  menu.open();
-};
-
-window.fn.load = function (page) {
-  var content = document.getElementById("content");
-  var menu = document.getElementById("menu");
-  content.load(page).then(menu.close.bind(menu));
-};
+  window.fn.load = function (page) {
+    var content = document.getElementById("content");
+    var menu = document.getElementById("menu");
+    content.load(page).then(menu.close.bind(menu));
+  };
+}
