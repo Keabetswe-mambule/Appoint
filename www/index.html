@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="../node_modules/onsenui/css/onsen-css-components.min.css"
     />
+    <link rel="stylesheet" href="css/index.css" />
     <title>Document</title>
   </head>
   <body>
@@ -16,14 +17,25 @@
       <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
         <ons-page>
           <ons-list>
+            <ons-list-item onclick="fn.load('#')" tappable>
+              Profile
+            </ons-list-item>
             <ons-list-item onclick="fn.load('home.html')" tappable>
               Home
+            </ons-list-item>
+            <ons-list-item onclick="fn.load('past.html')" tappable>
+              Archived
             </ons-list-item>
             <ons-list-item onclick="fn.load('settings.html')" tappable>
               Settings
             </ons-list-item>
+          </ons-list>
+          <ons-list class="bot_menu">
             <ons-list-item onclick="fn.load('about.html')" tappable>
               About
+            </ons-list-item>
+            <ons-list-item onclick="fn.load('#')" tappable>
+              Logout
             </ons-list-item>
           </ons-list>
         </ons-page>
@@ -67,7 +79,7 @@
       </ons-page>
     </template>
     <!-----------------------------Doctor------------------------------------>
-    <template id="home.html">
+    <template id="home_doctor.html">
       <ons-page>
         <ons-toolbar>
           <div class="left">
