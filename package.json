@@ -1,5 +1,5 @@
 {
-  "name": "com.bac.vicandfriends",
+  "name": "appoint",
   "displayName": "AppOint",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
@@ -23,5 +23,16 @@
     "platforms": [
       "android"
     ]
-  }
+  },
+  "dependencies": {
+    "onsenui": "^2.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keabetswe-mambule/Appoint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Keabetswe-mambule/Appoint/issues"
+  },
+  "homepage": "https://github.com/Keabetswe-mambule/Appoint#readme"
 }
