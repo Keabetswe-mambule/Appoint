@@ -1,0 +1,332 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="center">Home</div>
+  </ons-toolbar>
+
+<ons-list>
+  <ons-list-header style="
+      padding-top: 20px;
+      color:#0076ff;
+    ">Upcoming appointments</ons-list-header>
+  <ons-list-item class="space" expandable>
+    Appointment with Dr Gure
+    <div class="expandable-content">
+            <ons-list>
+        <ons-list-item><span>Location: </span></ons-list-item>
+        <ons-list-item><span>Date: </span></ons-list-item>
+        <ons-list-item><span>Priority: </span></ons-list-item>
+    </ons-list>
+    </div>
+  </ons-list-item>
+  <ons-list-item expandable>
+    Appointment with Dr Gure
+    <div class="expandable-content">
+            <ons-list>
+        <ons-list-item><span>Location: </span></ons-list-item>
+        <ons-list-item><span>Date: </span></ons-list-item>
+        <ons-list-item><span>Priority: </span></ons-list-item>
+    </ons-list>
+    </div>
+  </ons-list-item>
+  
+</ons-list>
+
+
+
+
+  <ons-fab position="bottom right">
+    <ons-icon icon="md-plus" onclick="showModal()"></ons-icon>
+  </ons-fab>
+
+  <ons-modal style="background-color: #efeff4;" direction="up">
+   <ons-page>
+    <ons-toolbar>
+    <div class="center">Schedule Appointment</div>
+    <div class="right">
+      <ons-toolbar-button onclick="closeModal()">Close</ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+    <div style="text-align: center">
+ 
+  <p
+   style="
+      text-align: center;
+      opacity: 0.6;
+      padding-top: 20px;
+      color:#0076ff;
+      margin-top:8%;
+    ">
+How do you feel?
+<ons-row style="margin-top: 20px;">
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-thumb-down"></ons-icon>
+      </ons-col>
+      <ons-col>
+        <ons-range style="width: 100%;" value="75"></ons-range>
+      </ons-col>
+      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+        <ons-icon icon="md-thumb-up"></ons-icon>
+      </ons-col>
+    </ons-row>
+  </p>
+  <p
+   style="
+      text-align: center;
+      opacity: 0.6;
+      padding-top: 20px;
+      color:#0076ff;
+    ">
+Are you obese or overwieght?
+<p>  <ons-list>
+    <ons-list-item class="ons-list-item-edit" tappable>
+      <label class="left">
+        <ons-radio name="obese" input-id="obese-yes"></ons-radio>
+      </label>
+      <label for="obese-yes" class="center">
+        Yes
+      </label>
+    </ons-list-item>
+    <ons-list-item class="ons-list-item-edit" tappable>
+      <label class="left">
+        <ons-radio name="obese" input-id="obese-no"></ons-radio>
+      </label>
+      <label for="obese-no" class="center">
+        No
+      </label>
+    </ons-list-item>
+  </ons-list></p>
+  </p>
+  <p
+   style="
+      text-align: center;
+      opacity: 0.6;
+      padding-top: 20px;
+      color:#0076ff;
+    ">
+Do you smoke?
+<p>  <ons-list>
+    <ons-list-item class="ons-list-item-edit" tappable>
+      <label class="left">
+        <ons-radio name="smoke" input-id="smoke-yes"></ons-radio>
+      </label>
+      <label for="smoke-yes" class="center">
+        Yes
+      </label>
+    </ons-list-item>
+    <ons-list-item class="ons-list-item-edit" tappable>
+      <label class="left">
+        <ons-radio name="smoke" input-id="smoke-no"></ons-radio>
+      </label>
+      <label for="smoke-no" class="center">
+        No
+      </label>
+    </ons-list-item>
+  </ons-list></p>
+  </p>
+  <p
+   style="
+      text-align: center;
+      opacity: 0.6;
+      padding-top: 20px;
+      color:#0076ff;
+    ">
+Have you recently suffered an injury?
+<p>  <ons-list>
+    <ons-list-item class="ons-list-item-edit" tappable>
+      <label class="left">
+        <ons-radio name="injury" input-id="injury-yes"></ons-radio>
+      </label>
+      <label for="injury-yes" class="center">
+        Yes
+      </label>
+    </ons-list-item>
+    <ons-list-item class="ons-list-item-edit" tappable>
+      <label class="left">
+        <ons-radio name="injury" input-id="injury-no"></ons-radio>
+      </label>
+      <label for="injury-no" class="center">
+        No
+      </label>
+    </ons-list-item>
+  </ons-list></p>
+  </p>
+  <p
+   style="
+      text-align: center;
+      opacity: 0.6;
+      padding-top: 20px;
+      color:#0076ff;
+    ">
+Do you have diabetes, hypertension or high cholestrol?
+<p>
+   <ons-list>
+    <ons-list-item tappable>
+      <label class="left">
+        <ons-checkbox input-id="diabetes"></ons-checkbox>
+      </label>
+      <label for="diabetes" class="center">
+        Diabetes
+      </label>
+    </ons-list-item>
+
+    <ons-list-item tappable>
+      <label class="left">
+        <ons-checkbox input-id="hypertension"></ons-checkbox>
+      </label>
+      <label for="hypertension" class="center">
+        Hypertension
+      </label>
+    </ons-list-item>
+
+    <ons-list-item tappable>
+      <label class="left">
+        <ons-checkbox input-id="cholestrol"></ons-checkbox>
+      </label>
+      <label for="cholestrol" class="center">
+        High cholestrol
+      </label>
+    </ons-list-item>
+  </ons-list>
+</p>
+  </p>
+    <p
+   style="
+      text-align: center;
+      opacity: 0.6;
+      padding-top: 20px;
+      color:#0076ff;
+    ">
+Add symptoms
+<p>
+  <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="headache"></ons-checkbox>
+      </label>
+      <label class="label" for="headache" class="center">
+        headache
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="tummy-ache"></ons-checkbox>
+      </label>
+      <label class="label" for="tummy-ache" class="center">
+        tummy ache
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="trouble-breathing"></ons-checkbox>
+      </label>
+      <label class="label" for="trouble-breathing" class="center">
+        trouble breathing
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="nausea"></ons-checkbox>
+      </label>
+      <label class="label" for="nausea" class="center">
+        nausea
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="weight-loss"></ons-checkbox>
+      </label>
+      <label class="label" for="weight-loss" class="center">
+        weight loss
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="diahorea"></ons-checkbox>
+      </label>
+      <label class="label" for="diahorea" class="center">
+        diahorea
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="dizzy"></ons-checkbox>
+      </label>
+      <label class="label" for="dizzy" class="center">
+        dizzy
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="anxiety"></ons-checkbox>
+      </label>
+      <label class="label" for="anxiety" class="center">
+        anxiety
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="nose-bleed"></ons-checkbox>
+      </label>
+      <label class="label" for="nose-bleed" class="center">
+        nose bleed
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="runny-nose"></ons-checkbox>
+      </label>
+      <label class="label" for="runny-nose" class="center">
+        runny nose
+      </label>
+    </ons-list-item>
+
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="fever"></ons-checkbox>
+      </label>
+      <label class="label" for="fever" class="center">
+        fever
+      </label>
+    </ons-list-item>
+    
+    <ons-list-item class="syptoms" tappable>
+      <label class="left">
+        <ons-checkbox input-id="vommiting"></ons-checkbox>
+      </label>
+      <label class="label" for="vommiting" class="center">
+        vommiting
+      </label>
+    </ons-list-item>
+    
+    <p>
+      <ons-input style="margin-top: 30px !important;" id="symptoms" modifier="underbar" placeholder="Other symptoms" float></ons-input>
+    </p>
+    <br/>
+    <p>
+      <ons-input
+        id="apdate"
+        onfocus="(this.firstElementChild.setAttribute('type', 'date'))"
+        onfocusout="(this.firstElementChild.setAttribute('type', 'text'))"
+        modifier="underbar"
+        placeholder="Prefered Date"
+        float
+      ></ons-input>
+    </p>
+
+</p>
+</p>
+    <p >
+      <ons-button style="margin-top: 30px !important;">Schedule appointment</ons-button>
+    </p>
+    </div>
+    </ons-page>
+  </ons-modal>
+</ons-page>

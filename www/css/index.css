@@ -3,3 +3,41 @@ ons-list.bot_menu {
   width: 100%;
   bottom: 0;
 }
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 35%;
+  margin-bottom: 30%;
+}
+ons-input,
+ons-button,
+ons-select {
+  width: 80%;
+}
+.linki {
+  color: #000;
+}
+.ons-list-item-edit {
+  width: 50% !important;
+  float: left;
+  padding-left: 15% !important;
+}
+
+.syptoms {
+  width: 33% !important;
+  float: left !important;
+}
+.label {
+  margin-left: -32px !important;
+}
+
+.space {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+ons-list-item {
+  color: #0076ff !important;
+}

@@ -1,0 +1,54 @@
+<ons-page>
+  <div><img id="logo" src="img/logo.png" alt="logo" /></div>
+  <div style="text-align: center; margin-top: 30px">
+    <p>
+      <ons-input
+        id="phone"
+        type="number"
+        modifier="underbar"
+        placeholder="Phone number"
+        float
+      ></ons-input>
+    </p>
+    <p>
+      <ons-input
+        id="password"
+        modifier="underbar"
+        type="password"
+        placeholder="Password"
+        float
+      ></ons-input>
+    </p>
+    <p style="margin-top: 30px">
+      <ons-button onclick="login()">Sign in</ons-button>
+    </p>
+    <p
+      style="text-align: center; opacity: 0.6; padding-top: 20px"
+      onclick="ons.notification.toast('Password reset link sent via sms!', {
+    timeout: 2000, animation: 'fall' 
+      })"
+      ;
+    >
+      Forgot Password
+    </p>
+    <p
+      style="
+        text-align: center;
+        opacity: 0.6;
+        padding-top: 20px;
+        position: fixed;
+        bottom: 0px;
+        left: 30%;
+      "
+    >
+      Don't have an account? <br />
+      <span
+        class="linki"
+        onclick="document
+        .querySelector(`#myNavigator`)
+        .pushPage(`pages/signup.html`)"
+        >Create one</span
+      >
+    </p>
+  </div>
+</ons-page>
