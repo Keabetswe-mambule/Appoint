@@ -41,3 +41,10 @@ ons-select {
 ons-list-item {
   color: #0076ff !important;
 }
+.view-ap-main {
+  width: 45% !important;
+}
+.delete-ap-main {
+  background-color: red !important;
+  width: 95% !important;
+}

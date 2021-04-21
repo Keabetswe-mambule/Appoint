@@ -1,40 +1,23 @@
-<ons-page>
+<ons-page id="main.html">
   <ons-toolbar>
     <div class="center">Home</div>
+    <div class="right">
+      <ons-toolbar-button onclick="showPopover(this)">
+        <ons-icon icon="ion-navicon, material:md-more-vert"></ons-icon>
+      </ons-toolbar-button>
+    </div>
   </ons-toolbar>
 
-<ons-list>
+<ons-list id="lister">
   <ons-list-header style="
       padding-top: 20px;
       color:#0076ff;
-    ">Upcoming appointments</ons-list-header>
-  <ons-list-item class="space" expandable>
-    Appointment with Dr Gure
-    <div class="expandable-content">
-            <ons-list>
-        <ons-list-item><span>Location: </span></ons-list-item>
-        <ons-list-item><span>Date: </span></ons-list-item>
-        <ons-list-item><span>Priority: </span></ons-list-item>
-    </ons-list>
-    </div>
-  </ons-list-item>
-  <ons-list-item expandable>
-    Appointment with Dr Gure
-    <div class="expandable-content">
-            <ons-list>
-        <ons-list-item><span>Location: </span></ons-list-item>
-        <ons-list-item><span>Date: </span></ons-list-item>
-        <ons-list-item><span>Priority: </span></ons-list-item>
-    </ons-list>
-    </div>
-  </ons-list-item>
+    "><strong><b>Upcoming appointments</b></strong></ons-list-header>
   
 </ons-list>
 
 
-
-
-  <ons-fab position="bottom right">
+  <ons-fab id="fab" position="bottom right">
     <ons-icon icon="md-plus" onclick="showModal()"></ons-icon>
   </ons-fab>
 
@@ -43,7 +26,7 @@
     <ons-toolbar>
     <div class="center">Schedule Appointment</div>
     <div class="right">
-      <ons-toolbar-button onclick="closeModal()">Close</ons-toolbar-button>
+      <ons-toolbar-button onclick="closeModal()" style="color: red; font-size: small;">Close</ons-toolbar-button>
     </div>
   </ons-toolbar>
     <div style="text-align: center">
@@ -58,11 +41,11 @@
     ">
 How do you feel?
 <ons-row style="margin-top: 20px;">
-      <ons-col width="40px" style="text-align: center; line-height: 31px;">
+      <ons-col width="40px" style="text-align: center; line-height: 31px; color: red;">
         <ons-icon icon="md-thumb-down"></ons-icon>
       </ons-col>
       <ons-col>
-        <ons-range style="width: 100%;" value="75"></ons-range>
+        <ons-range id="health" style="width: 100%;" value="75"></ons-range>
       </ons-col>
       <ons-col width="40px" style="text-align: center; line-height: 31px;">
         <ons-icon icon="md-thumb-up"></ons-icon>
@@ -312,7 +295,7 @@ Add symptoms
     <br/>
     <p>
       <ons-input
-        id="apdate"
+        id="appoint"
         onfocus="(this.firstElementChild.setAttribute('type', 'date'))"
         onfocusout="(this.firstElementChild.setAttribute('type', 'text'))"
         modifier="underbar"
@@ -324,9 +307,24 @@ Add symptoms
 </p>
 </p>
     <p >
-      <ons-button style="margin-top: 30px !important;">Schedule appointment</ons-button>
+      <ons-button style="margin-top: 30px !important;" onclick="schedule()">Schedule appointment</ons-button>
     </p>
     </div>
     </ons-page>
   </ons-modal>
+  <ons-popover direction="down" id="popover">
+  <div style="padding: 10px; text-align: center;">
+   <ons-list>
+     <ons-list-item onclick="document
+        .querySelector(`#myNavigator`)
+        .pushPage(`pages/past.html`)">Archived</ons-list-item>
+
+     <ons-list-item onclick="document
+        .querySelector(`#myNavigator`)
+        .pushPage(`pages/about.html`)">About</ons-list-item>
+     <ons-list-item onclick="logOut()">Sign out <s id="showname"></s></ons-list-item>
+    
+   </ons-list>
+  </div>
+</ons-popover>
 </ons-page>

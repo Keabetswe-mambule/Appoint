@@ -2,7 +2,7 @@
   <div>
     <img
       id="logo"
-      style="margin-top: 25% !important; margin-bottom: 5% !important"
+      style="margin-top: 10% !important; margin-bottom: 5% !important"
       src="img/logo.png"
       alt="logo"
     />
@@ -36,10 +36,10 @@
     </p>
     <p>
       <ons-input
-        id="phone"
-        type="number"
+        id="email_"
+        type="email"
         modifier="underbar"
-        placeholder="Phone number"
+        placeholder="Email"
         float
       ></ons-input>
     </p>
@@ -64,18 +64,25 @@
         <option value="female">Female</option>
       </ons-select>
     </p>
-
     <p>
       <ons-input
-        id="password"
-        modifier="underbar"
+        id="password_"
         type="password"
+        modifier="underbar"
         placeholder="Password"
         float
       ></ons-input>
     </p>
+    <p align="center">
+      <ons-list-item style="width: 80% !important" tappable>
+        <label class="left">
+          <ons-checkbox input-id="isDoctor_"></ons-checkbox>
+        </label>
+        <label for="isDoctor_" class="center"> Are you a doctor? </label>
+      </ons-list-item>
+    </p>
     <p style="margin-top: 30px">
-      <ons-button onclick="login()">Create account</ons-button>
+      <ons-button onclick="signUp()">Create account</ons-button>
     </p>
     <p
       style="
